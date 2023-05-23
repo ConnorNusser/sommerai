@@ -7,12 +7,6 @@ export const MotionHeroBox = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const { scrollYProgress } = useViewportScroll();
 
-  const offsetFirst = useTransform(scrollYProgress, [0, 1], [0, -500]);
-  const offsetSecond = useTransform(scrollYProgress, [0.2, 1], [0, -500]);
-  const offsetThird = useTransform(scrollYProgress, [0.4, 1], [0, -500]);
-  const offsetFourth = useTransform(scrollYProgress, [0.6, 1], [0, -500]);
-  const offsets = [offsetFirst, offsetSecond, offsetThird, offsetFourth];
-
   const widths = [340, 320, 288, 256];
 
   const cardAnimationVariants = {
@@ -27,28 +21,25 @@ export const MotionHeroBox = () => {
   };
 
   return (
+    <div style={{display:'flex'}}>
     <MotionBox
-      w={{ base: '100%', md: 340 }}
-      h={200}
+    display={'flex'}
+      style={{ translateY: isMobile ? 0 : 1}}
+      w={{ base: '100%', md: 400, lg: 400, xl: 400, sm: 400 }}
+      h={300}
       mb={20}
-      initial={'initial'}
-      animate={'show'}
-      display={'flex'}
-      flexDirection={'column'}
-      alignItems={'center'}
       position={'relative'}
-      transition={{ staggerChildren: 0.15 }}>
+      opacity={1}
+      rounded={'xl'}
+      transition={{ staggerChildren: 0.10 }}>
       {[0, 1, 2, 3].map((i) => (
         <MotionBox
           key={i}
-          style={{ translateY: isMobile ? 0 : offsets[i] }}
-          opacity={0}
+          opacity={1}
           position={'absolute'}
           bottom={0}
           mb={2 - i * 20}
           variants={cardAnimationVariants}
-          justify={'center'}
-          align={'center'}
           flex={1}
           p={8}
           bg={useColorModeValue('white', 'gray.800')}
@@ -63,5 +54,6 @@ export const MotionHeroBox = () => {
         </MotionBox>
       ))}
     </MotionBox>
+    </div>
   );
 };

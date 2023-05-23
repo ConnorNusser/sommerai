@@ -1,11 +1,11 @@
-import { Heading, Text } from "@chakra-ui/react"
+import { Button, Heading, Input, Text } from "@chakra-ui/react"
 
 const HeadingComponent = () => {
 
     
 
     return (
-<div>
+<div style={{ display:'inline-block'}}>
             <Heading
         mb={6}
         fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
@@ -42,6 +42,8 @@ const HeadingComponent = () => {
       </Text>
       <Text fontSize='xl'>{' '} for everything healthcare.</Text>
       </Text>
+      <Input placeholder="Whats your email?"/>
+      <Button alignContent='center'>See Sommer</Button>
             </div>
     )
 }

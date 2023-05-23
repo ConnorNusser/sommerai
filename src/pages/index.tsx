@@ -11,12 +11,10 @@ export default function Home() {
   return (
     <main>
       <VStack spacing='4rem'>
-        <div>
-          <HStack>
+          <HStack justifyContent={'space-between'} display={'flex'} spacing={'12rem'}>
             <HeadingComponent/>
             <MotionHeroBox/>
           </HStack>
-        </div>
       <HStack>
       <LocalCard
                     title="Solution Focused Brief Therapy"
