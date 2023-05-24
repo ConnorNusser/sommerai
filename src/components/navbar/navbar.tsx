@@ -1,16 +1,18 @@
-import { ButtonGroup, Flex, Heading, chakra } from "@chakra-ui/react";
+import { ButtonGroup, Flex, Heading, Input, chakra } from "@chakra-ui/react";
 import Link from "next/link";
 import { useViewportScroll } from "framer-motion";
 import React from "react";
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
-import { DocSearch } from "components/doc-search";
+import { FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-import { Logo } from "components/logo";
 import { ActionButton } from "./action-button"
 import { ColorModeToggle } from "./color-mode-toggle"
 import SponsorButton from "./sponse-button"
 import { CONSTANTS } from "../../components/utils/constant"
+import {Text} from '@chakra-ui/react'
 
+const onOpen = () => {
+
+}
 function Navbar() {
   const ref = React.useRef<HTMLDivElement>(null);
   const [y, setY] = React.useState(0);
@@ -38,35 +40,57 @@ function Navbar() {
       <Flex>
         <Link href="/" passHref>
           <Flex as="a">
-            <Logo boxSize="6" mr="2" />
             <Heading fontSize="xl" fontWeight="semibold">
-              Choc UI
+              SommerAi
             </Heading>
           </Flex>
         </Link>
       </Flex>
 
-      <Flex justify="center">
-        <DocSearch w="sm" display={{ md: "flex" }} />
+      <Flex justify="center" style={{justifyContent:'space-around'}}>
+      <Link
+  href={{
+    pathname: '/products'}}
+passHref>
+  <Text>Products</Text>
+</Link>
+<Link
+  href={{
+    pathname: '/partners'}}
+passHref>
+  <Text>Partners</Text>
+</Link>
+<Link
+  href={{
+    pathname: '/about'}}
+passHref>
+  <Text>About Us</Text>
+</Link>
+<Link
+  href={{
+    pathname: '/contact'}}
+passHref>
+  <Text>Contact</Text>
+</Link>
       </Flex>
 
       <Flex justify="right">
         <ButtonGroup alignItems="center">
           <ActionButton
             isLink
-            href={CONSTANTS.CHOC_TWITTER}
+            href={CONSTANTS.SOMMER_TWITTER}
             aria-label="Choc UI on twitter"
             icon={<FaTwitter />}
           />
           <ActionButton
             isLink
-            href={CONSTANTS.CHOC_DISCORD}
-            aria-label="Choc UI discord server"
-            icon={<FaDiscord />}
+            href={CONSTANTS.SOMMER_LINKEDIN}
+            aria-label="Sommer Linkedin"
+            icon={<FaLinkedin />}
           />
           <ActionButton
             isLink
-            href={CONSTANTS.CHOC_GITHUB}
+            href={CONSTANTS.SOMMER_GITHUB}
             aria-label="Choc UI's Github Repo"
             icon={<FaGithub />}
           />
