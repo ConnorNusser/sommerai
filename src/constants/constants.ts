@@ -1,0 +1,1 @@
+export const TEST_ENVIRONMENT = 'http://localhost:5001/'

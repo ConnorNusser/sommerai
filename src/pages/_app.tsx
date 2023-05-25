@@ -8,4 +8,3 @@ import Navbar from '@/components/navbar/navbar'
 export default function App({ Component, pageProps }: AppProps) {
   return <CacheProvider><ChakraProvider><Navbar/><Component {...pageProps} /></ChakraProvider></CacheProvider>
 }
-ß
