@@ -1,13 +1,13 @@
 'use client'
-import Chat from "../../../../../components/Chat"
-import ChatInput from "../../../../../components/ChatInput"
+import Chat from "../../../../components/Chat"
+import ChatInput from "../../../../components/ChatInput"
 import { getServerSession } from 'next-auth'
 import '../../../../../styles/globals.css'
 import { authOptions } from "../../../../../pages/api/auth/[...nextauth]"
-import { SessionProvider } from "../../../../../components/SessionProvider"
-import Login from "../../../../../components/Login"
-import Sidebar from "../../../../../components/SideBar"
-import ClientProvider from "../../../../../components/ClientProvider"
+import { SessionProvider } from "../../../../components/SessionProvider"
+import Login from "../../../../components/Login"
+import Sidebar from "../../../../components/SideBar"
+import ClientProvider from "../../../../components/ClientProvider"
 import TherapyTypes from "../../../../../lib/therapyTypes"
 type Props = {
     params: {

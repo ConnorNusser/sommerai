@@ -1,9 +1,9 @@
 
 import React from 'react'
-import ClientProvider from '../../../components/ClientProvider'
-import Login from '../../../components/Login'
-import { SessionProvider } from '../../../components/SessionProvider'
-import Sidebar from '../../../components/SideBar'
+import ClientProvider from '../../components/ClientProvider'
+import Login from '../../components/Login'
+import { SessionProvider } from '../../components/SessionProvider'
+import Sidebar from '../../components/SideBar'
 import { authOptions } from '../../../pages/api/auth/[...nextauth]'
 import { getServerSession } from 'next-auth'
 import TherapyTypes from '../../../lib/therapyTypes'
