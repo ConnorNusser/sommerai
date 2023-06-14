@@ -4,7 +4,7 @@ import ClientProvider from '../../components/ClientProvider'
 import Login from '../../components/Login'
 import { SessionProvider } from '../../components/SessionProvider'
 
-import { authOptions } from '../../../pages/api/auth/[...nextauth]'
+import {authOptions} from '../api/auth/[...nextauth]'
 import { getServerSession } from 'next-auth'
 
 import '../../../styles/globals.css'

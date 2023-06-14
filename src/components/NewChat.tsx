@@ -4,8 +4,8 @@ import { PlusIcon } from "@heroicons/react/24/solid"
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { db } from "../firebase";
-import TherapyTypes from "../lib/therapyTypes";
+import { db } from "../firebase"
+import {TherapyTypes} from "../constants/therapytypes"
 
 type Props = {
     therapy: string

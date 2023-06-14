@@ -3,10 +3,9 @@ import ClientProvider from '../../components/ClientProvider'
 import Login from '../../components/Login'
 import { SessionProvider } from '../../components/SessionProvider'
 import Sidebar from '../../components/SideBar'
-import { authOptions } from '../../../pages/api/auth/[...nextauth]'
+import { authOptions } from '../api/auth/[...nextauth]'
 import { getServerSession } from 'next-auth'
-import TherapyTypes from '../../../lib/therapyTypes'
-import '../../../styles/globals.css'
+import {TherapyTypes} from '../../constants/therapytypes'
 
 async function CognitiveBehavioral() {
     const session = await getServerSession(authOptions);

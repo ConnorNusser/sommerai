@@ -66,12 +66,6 @@ passHref>
 passHref>
   <Text>About Us</Text>
 </Link>
-<Link
-  href={{
-    pathname: '/contact'}}
-passHref>
-  <Text>Contact</Text>
-</Link>
       </Flex>
 
       <Flex justify="right">
