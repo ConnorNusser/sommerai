@@ -1,6 +1,7 @@
 import { Avatar, Box, Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, IconButton, VStack, Text, chakra, SimpleGrid, Stack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import {Image, Link} from '@chakra-ui/next-js';
+import Link from 'next/link';
+import {JOBS_PAGE} from '../constants/constants';
 
 
 
@@ -32,6 +33,10 @@ export default function Careers() {
 
 
 const JobsHero= () => {
+    function openJobs(): void {
+        throw new Error("Function not implemented.");
+    }
+
     return (
         <Flex
   bg="#edf3f8"
@@ -90,10 +95,11 @@ const JobsHero= () => {
         <chakra.span display="block">Interested in joining Sommer?</chakra.span>
         <chakra.span
           display="block"
-          color="brand.600"
+          color="gray.500"
           _dark={{
             color: "gray.500",
           }}
+
         >
           Click to the right, For new openings.
         </chakra.span>
@@ -111,9 +117,12 @@ const JobsHero= () => {
           lg: 0,
         }}
       >
-        <Button size={'lg'} backgroundColor={'purple.300'}>
+          <Link href={JOBS_PAGE} passHref={true}>
+          <Button size={'lg'} backgroundColor={'purple.300'}>
             View Openings
         </Button>
+  </Link>
+
       </Stack>
     </Box>
   </Box>

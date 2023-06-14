@@ -80,21 +80,9 @@ passHref>
         <ButtonGroup alignItems="center">
           <ActionButton
             isLink
-            href={CONSTANTS.SOMMER_TWITTER}
-            aria-label="Choc UI on twitter"
-            icon={<FaTwitter />}
-          />
-          <ActionButton
-            isLink
             href={CONSTANTS.SOMMER_LINKEDIN}
             aria-label="Sommer Linkedin"
             icon={<FaLinkedin />}
-          />
-          <ActionButton
-            isLink
-            href={CONSTANTS.SOMMER_GITHUB}
-            aria-label="Choc UI's Github Repo"
-            icon={<FaGithub />}
           />
           <ColorModeToggle />
           <SponsorButton />
