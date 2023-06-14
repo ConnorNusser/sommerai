@@ -25,7 +25,7 @@ const HeadingComponent = () => {
           bgGradient="linear(to-r, green.400,purple.500)"
           fontWeight="extrabold"
         >
-          SommerAi
+          SommerAI
         </Text>{" "}
       </Heading>
       <Text fontSize='xl'>

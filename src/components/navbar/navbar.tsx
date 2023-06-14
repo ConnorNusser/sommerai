@@ -41,7 +41,7 @@ function Navbar() {
         <Link href="/" passHref>
           <Flex as="a">
             <Heading fontSize="xl" fontWeight="semibold">
-              SommerAi
+              SommerAI
             </Heading>
           </Flex>
         </Link>
@@ -66,6 +66,14 @@ passHref>
 passHref>
   <Text>About Us</Text>
 </Link>
+<Link
+  href={{
+    pathname: '/careers'}}
+passHref>
+  <Text>Careers</Text>
+</Link>
+
+
       </Flex>
 
       <Flex justify="right">
